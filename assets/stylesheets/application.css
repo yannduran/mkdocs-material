@@ -287,12 +287,15 @@ pre {
  * Font faces
  * ------------------------------------------------------------------------- */
 /*
+ * Base URL and path for icon font.
+ */
+/*
  * Icon font
  */
 @font-face {
   font-family: 'Icon';
-  src: url("/assets/fonts/icon.eot?52m981");
-  src: url("/assets/fonts/icon.eot?#iefix52m981") format("embedded-opentype"), url("/assets/fonts/icon.woff?52m981") format("woff"), url("/assets/fonts/icon.ttf?52m981") format("truetype"), url("/assets/fonts/icon.svg?52m981#icon") format("svg");
+  src: url("http://squidfunk.github.io/mkdocs-material//assets/fonts/icon.eot?52m981");
+  src: url("http://squidfunk.github.io/mkdocs-material//assets/fonts/icon.eot?#iefix52m981") format("embedded-opentype"), url("http://squidfunk.github.io/mkdocs-material//assets/fonts/icon.woff?52m981") format("woff"), url("http://squidfunk.github.io/mkdocs-material//assets/fonts/icon.ttf?52m981") format("truetype"), url("http://squidfunk.github.io/mkdocs-material//assets/fonts/icon.svg?52m981#icon") format("svg");
   font-weight: normal;
   font-style: normal; }
 
