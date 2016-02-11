@@ -34,18 +34,24 @@
     {% if config.extra.logo %}
       <link rel="apple-touch-icon" href="{{ base_url }}/{{ config.extra.logo }}">
     {% endif %}
-    {% set icon = icon | default('assets/images/favicon-e565ddfa.ico') %}
+    {% set icon = icon | default('assets/images/favicon-e565ddfa3b.ico') %}
     <link rel="shortcut icon" type="image/x-icon" href="{{ base_url }}/{{ icon }}">
     <link rel="icon" type="image/x-icon" href="{{ base_url }}/{{ icon }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono">
-    <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application-334f02ec.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application-15b63ecfd8.css">
     {% for path in extra_css %}
       <link rel="stylesheet" href="{{ path }}">
     {% endfor %}
     {% block extrahead %}{% endblock %}
   </head>
   <body>
+    {% if repo_name == 'GitHub' %}
+      {% set repo_id = repo_url | replace('https://github.com/', '') %}
+      {% if repo_id[-1:] == '/' %}
+        {% set repo_id = repo_id[:-1] %}
+      {% endif %}
+    {% endif %}
     <div class="backdrop">
       <div class="backdrop-paper"></div>
     </div>
@@ -77,7 +83,7 @@
             Documentation built with
             <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
             using the
-            <a href="https://github.com/squidfunk/mkdocs-material" target="_blank">
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
               Material
             </a>
             theme.
@@ -97,13 +103,12 @@
         </div>
       </div>
     </main>
-    <script src="{{ base_url }}/assets/javascripts/modernizr-79394028.js"></script>
-    {% set repo_id = repo_url | replace('https://github.com/', '') %}
+    <script src="{{ base_url }}/assets/javascripts/modernizr-e5e5f05404.js"></script>
     <script>
       var base_url = '{{ base_url }}';
       var repo_id  = '{{ repo_id }}';
     </script>
-    <script src="{{ base_url }}/assets/javascripts/application-d84ecdee.js"></script>
+    <script src="{{ base_url }}/assets/javascripts/application-c6d2e828bd.js"></script>
     {% for path in extra_javascript %}
       <script src="{{ path }}"></script>
     {% endfor %}
