@@ -39,7 +39,7 @@
     <link rel="icon" type="image/x-icon" href="{{ base_url }}/{{ icon }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono">
-    <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application-15b63ecfd8.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application-1c31565cf8.css">
     {% for path in extra_css %}
       <link rel="stylesheet" href="{{ path }}">
     {% endfor %}
@@ -120,10 +120,20 @@
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;
           m.parentNode.insertBefore(a,m)
         })(window, document,
-          'script', '//www.google-analytics.com/analytics.js','ga');
+          'script', '//www.google-analytics.com/analytics.js', 'ga');
+        /* General initialization */
         ga('create', '{{ google_analytics[0] }}', '{{ google_analytics[1] }}');
         ga('set', 'anonymizeIp', true);
         ga('send', 'pageview');
+        /* Track outbound links */
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.href.host != window.location.host) {
+            item.addEventListener('click', function() {
+              ga('send', 'event', 'outbound', 'click', item.href);
+            });
+          }
+        });
       </script>
     {% endif %}
   </body>

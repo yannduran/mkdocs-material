@@ -35,7 +35,7 @@
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon-e565ddfa3b.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono">
-    <link rel="stylesheet" href="./assets/stylesheets/application-15b63ecfd8.css">
+    <link rel="stylesheet" href="./assets/stylesheets/application-1c31565cf8.css">
     
     
   </head>
@@ -124,7 +124,8 @@
       
         <ul class="repo">
           <li class="repo-download">
-            <a href="https://github.com/squidfunk/mkdocs-material/archive/master.zip" target="_blank" aria-label="Download squidfunk/mkdocs-material on GitHub">
+            
+            <a href="https://github.com/squidfunk/mkdocs-material/archive/0.1.1.zip" target="_blank" aria-label="Download squidfunk/mkdocs-material from GitHub">
               <i class="icon icon-download"></i> Download
             </a>
           </li>
@@ -248,8 +249,8 @@ browsers.</p>
 <li>
 <p>Well-tested and <strong>optimized CSS and Javascript</strong>, including a cross-browser
   fixed/sticky header, a drawer that even works without Javascript using
-  the <code>checkbox:checked</code> hack with fallbacks, <strong>responsive tables</strong> that scroll
-  when the screen is too small and <strong>well-defined print styles</strong>.</p>
+  the <code>:checked</code> hack with fallbacks, <strong>responsive tables</strong> that scroll when
+  the screen is too small and <strong>well-defined print styles</strong>.</p>
 </li>
 <li>
 <p>Extra configuration options like <strong>project logo</strong>, links to the authors
@@ -333,10 +334,20 @@ it up and running.</p>
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;
           m.parentNode.insertBefore(a,m)
         })(window, document,
-          'script', '//www.google-analytics.com/analytics.js','ga');
+          'script', '//www.google-analytics.com/analytics.js', 'ga');
+        /* General initialization */
         ga('create', 'UA-73586301-1', 'auto');
         ga('set', 'anonymizeIp', true);
         ga('send', 'pageview');
+        /* Track outbound links */
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.href.host != window.location.host) {
+            item.addEventListener('click', function() {
+              ga('send', 'event', 'outbound', 'click', item.href);
+            });
+          }
+        });
       </script>
     
   </body>
