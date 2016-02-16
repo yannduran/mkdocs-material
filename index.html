@@ -125,12 +125,12 @@
         <ul class="repo">
           <li class="repo-download">
             
-            <a href="https://github.com/squidfunk/mkdocs-material/archive/0.1.1.zip" target="_blank" aria-label="Download squidfunk/mkdocs-material from GitHub">
+            <a href="https://github.com/squidfunk/mkdocs-material/archive/0.1.1.zip" target="_blank" aria-label="Download squidfunk/mkdocs-material from GitHub" data-action="download">
               <i class="icon icon-download"></i> Download
             </a>
           </li>
           <li class="repo-stars">
-            <a href="https://github.com/squidfunk/mkdocs-material" target="_blank" aria-label="Star squidfunk/mkdocs-material on GitHub">
+            <a href="https://github.com/squidfunk/mkdocs-material" target="_blank" aria-label="Star squidfunk/mkdocs-material on GitHub" data-action="star">
               <i class="icon icon-star"></i> Star
               <span class="count">&ndash;</span>
             </a>
@@ -339,15 +339,16 @@ it up and running.</p>
         ga('create', 'UA-73586301-1', 'auto');
         ga('set', 'anonymizeIp', true);
         ga('send', 'pageview');
-        // /* Track outbound links */
-        // var buttons = document.querySelectorAll('a');
-        // Array.prototype.map.call(buttons, function(item) {
-        //   if (item.href.host != window.location.host) {
-        //     item.addEventListener('click', function() {
-        //       ga('send', 'event', 'outbound', 'click', item.href);
-        //     });
-        //   }
-        // });
+        /* Track outbound links */
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.host != window.location.host) {
+            item.addEventListener('click', function() {
+              var action = item.getAttribute('data-action') || 'follow';
+              ga('send', 'event', 'outbound', action, item.href);
+            });
+          }
+        });
       </script>
     
   </body>

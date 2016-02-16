@@ -125,15 +125,16 @@
         ga('create', '{{ google_analytics[0] }}', '{{ google_analytics[1] }}');
         ga('set', 'anonymizeIp', true);
         ga('send', 'pageview');
-        // /* Track outbound links */
-        // var buttons = document.querySelectorAll('a');
-        // Array.prototype.map.call(buttons, function(item) {
-        //   if (item.href.host != window.location.host) {
-        //     item.addEventListener('click', function() {
-        //       ga('send', 'event', 'outbound', 'click', item.href);
-        //     });
-        //   }
-        // });
+        /* Track outbound links */
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.host != window.location.host) {
+            item.addEventListener('click', function() {
+              var action = item.getAttribute('data-action') || 'follow';
+              ga('send', 'event', 'outbound', action, item.href);
+            });
+          }
+        });
       </script>
     {% endif %}
   </body>
