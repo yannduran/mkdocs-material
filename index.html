@@ -33,9 +33,43 @@
     
     <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon-e565ddfa3b.ico">
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon-e565ddfa3b.ico">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono">
-    <link rel="stylesheet" href="./assets/stylesheets/application-c139d44726.css">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('./assets/fonts/icon.eot?52m981');
+      	src: url('./assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('./assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('./assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('./assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="./assets/stylesheets/application-aa50e5707f.css">
+    
+      
+      
+        
+      
+      
+      
+        
+      
+      
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu Mono">
+      <style>
+        body, input {
+          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
     
     
   </head>
@@ -51,7 +85,7 @@
     <input class="toggle" type="checkbox" id="toggle-search">
     <label class="toggle-button overlay" for="toggle-drawer"></label>
     <header class="header">
-      <nav aria-label="top navigation">
+      <nav aria-label="Header">
   <div class="bar default">
     <div class="button button-menu" role="button" aria-label="Menu">
       <label class="toggle-button icon icon-menu" for="toggle-drawer">
@@ -102,7 +136,7 @@
     <main class="main">
       
       <div class="drawer">
-        <nav aria-label="navigation">
+        <nav aria-label="Navigation">
   <a href="https://github.com/squidfunk/mkdocs-material" class="project">
     <div class="banner">
       
@@ -125,12 +159,12 @@
         <ul class="repo">
           <li class="repo-download">
             
-            <a href="https://github.com/squidfunk/mkdocs-material/archive/0.1.1.zip" target="_blank" aria-label="Download squidfunk/mkdocs-material from GitHub" data-action="download">
+            <a href="https://github.com/squidfunk/mkdocs-material/archive/0.1.1.zip" target="_blank" title="Download squidfunk/mkdocs-material from GitHub" data-action="download">
               <i class="icon icon-download"></i> Download
             </a>
           </li>
           <li class="repo-stars">
-            <a href="https://github.com/squidfunk/mkdocs-material" target="_blank" aria-label="Star squidfunk/mkdocs-material on GitHub" data-action="star">
+            <a href="https://github.com/squidfunk/mkdocs-material" target="_blank" title="Star squidfunk/mkdocs-material on GitHub" data-action="star">
               <i class="icon icon-star"></i> Star
               <span class="count">&ndash;</span>
             </a>
@@ -138,9 +172,10 @@
         </ul>
         <hr>
       
-      <ul class="toc">
-        
+      <div class="toc">
+        <ul>
           
+            
   <li>
     <a class="current" title="Material" href=".">
       Material
@@ -168,8 +203,8 @@
     
   </li>
 
-        
           
+            
   <li>
     <a class="" title="Getting started" href="getting-started/">
       Getting started
@@ -177,8 +212,8 @@
     
   </li>
 
-        
           
+            
   <li>
     <a class="" title="Customization" href="customization/">
       Customization
@@ -186,8 +221,8 @@
     
   </li>
 
-        
           
+            
   <li>
     <a class="" title="License" href="license/">
       License
@@ -195,30 +230,31 @@
     
   </li>
 
+          
+        </ul>
         
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+              
+              <li>
+                <a href="https://twitter.com/squidfunk" target="_blank" title="@squidfunk on Twitter">
+                  @squidfunk on Twitter
+                </a>
+              </li>
+            
+            
+              
+              <li>
+                <a href="https://github.com/squidfunk" target="_blank" title="@squidfunk on GitHub">
+                  @squidfunk on GitHub
+                </a>
+              </li>
+            
+          </ul>
         
-          <li>
-            <hr>
-            <span class="section">The author</span>
-            <ul>
-              
-                <li>
-                  <a href="https://twitter.com/squidfunk" title="@squidfunk on Twitter" target="_blank">
-                    @squidfunk on Twitter
-                  </a>
-                </li>
-              
-              
-                <li>
-                  <a href="https://github.com/squidfunk" title="@squidfunk on GitHub" target="_blank">
-                    @squidfunk on GitHub
-                  </a>
-                </li>
-              
-            </ul>
-          </li>
-        
-      </ul>
+      </div>
     </div>
   </div>
 </nav>
@@ -267,7 +303,7 @@ browsers.</p>
   homescreen, it behaves and looks like a native application.</p>
 </li>
 </ul>
-<p>See the <a href="./getting-started">getting started guide</a> for instructions how to get
+<p>See the <a href="getting-started/">getting started guide</a> for instructions how to get
 it up and running.</p>
           <aside class="copyright" role="note">
             
@@ -284,7 +320,7 @@ it up and running.</p>
           
             <footer class="footer">
               
-  <nav class="pagination" aria-label="footer navigation">
+  <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
     </div>
@@ -319,7 +355,7 @@ it up and running.</p>
         </div>
       </div>
     </main>
-    <script src="./assets/javascripts/modernizr-e5e5f05404.js"></script>
+    <script src="./assets/javascripts/modernizr-4ab42b99fd.js"></script>
     <script>
       var base_url = '.';
       var repo_id  = 'squidfunk/mkdocs-material';
