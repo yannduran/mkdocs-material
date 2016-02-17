@@ -287,20 +287,24 @@ variables in your <code>mkdocs.yml</code>:</p>
 <a href="http://www.mkdocs.org/user-guide/styling-your-docs/#customising-a-theme">MkDocs documentation</a>.</p>
 <h2 id="fundamental-changes">Fundamental changes<a class="headerlink" href="#fundamental-changes" title="Permanent link">¶</a></h2>
 <p>If you want to make larger adjustments like changing the color palette or
-typography, you should check out the repository of the project and compile
-the SASS sources with your changes. The project design is very modular, so
-most things can be changed by tweaking a few variables.</p>
+typography, you should check out or download the repository of the project and
+compile the SASS sources with your changes. The project design is very modular,
+so most things can be tweaked by changing a few variables.</p>
 <h3 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">¶</a></h3>
-<p>In order to compile the project, you need <code>node</code>, <code>bower</code> and <code>gulp</code> up and
-running. It's best to use the most recent versions, but it should also work if
-your installations are not too dated. The project itself is hosted on GitHub,
-so the next thing you should do is clone the project from GitHub:</p>
+<p>In order to compile the project, you need <code>node</code> with a version greater than
+<code>0.11</code> up and running. Then, make sure <code>bower</code> is installed or install it:</p>
+<div class="code"><pre>npm install -g bower
+</pre></div>
+
+
+<p>The project itself is hosted on GitHub, so the next
+thing you should do is clone the project from GitHub:</p>
 <div class="code"><pre>git clone https://github.com/squidfunk/mkdocs-material
 </pre></div>
 
 
 <p>Then you change the directory and install all dependencies specified in the
-<code>package.json</code> and <code>bower.json</code>:</p>
+<code>package.json</code> and <code>bower.json</code> with the following command:</p>
 <div class="code"><pre><span class="nb">cd </span>mkdocs-material
 npm install <span class="o">&amp;&amp;</span> bower install
 </pre></div>
@@ -308,10 +312,10 @@ npm install <span class="o">&amp;&amp;</span> bower install
 
 <h3 id="development">Development<a class="headerlink" href="#development" title="Permanent link">¶</a></h3>
 <p>The asset pipeline is contained in <code>Gulpfile.js</code>, which you can start with
-<code>gulp watch</code>. This will also run <code>mkdocs serve</code>, to monitor changes to the
-documentation. Point your browser to <a href="http://localhost:8000">localhost:8000</a>
-and you should see this very documentation in front of your eyes.</p>
-<div class="code"><pre>gulp watch
+<code>gulp watch</code>. If you specify the <code>--mkdocs</code> flag, this will also run
+<code>mkdocs serve</code>, to monitor changes to the documentation. Point your browser to <a href="http://localhost:8000">localhost:8000</a> and you should see this very
+documentation in front of your eyes.</p>
+<div class="code"><pre>gulp watch --mkdocs
 </pre></div>
 
 
@@ -331,11 +335,17 @@ resemble all the colors contained in the material design palette.
 </pre></div>
 
 
-<p>The <code>production</code> flag triggers the production-level compilation and
+<p>The <code>--production</code> flag triggers the production-level compilation and
 minification of all CSS and Javascript sources. When the command is ready,
 the final theme is located in the <code>material</code> directory. Add the <code>theme_dir</code>
 variable pointing to the aforementioned directory in your original
-<code>mkdocs.yml</code> and you should see your documentation with your changes!</p>
+<code>mkdocs.yml</code>:</p>
+<div class="code"><pre><span class="l-Scalar-Plain">theme_dir</span><span class="p-Indicator">:</span> <span class="s">&#39;mkdocs-material/material&#39;</span>
+</pre></div>
+
+
+<p>Now you can run <code>mkdocs build</code> and you should see your documentation with your
+changes to the original Material theme.</p>
           <aside class="copyright" role="note">
             
               Copyright (c) 2016 Martin Donath &ndash;
@@ -400,7 +410,7 @@ variable pointing to the aforementioned directory in your original
         </div>
       </div>
     </main>
-    <script src="../assets/javascripts/modernizr-c9950243c2.js"></script>
+    <script src="../assets/javascripts/modernizr-4ab42b99fd.js"></script>
     <script>
       var base_url = '..';
       var repo_id  = 'squidfunk/mkdocs-material';

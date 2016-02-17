@@ -281,7 +281,7 @@
           <h1 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">¶</a></h1>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h2>
 <h3 id="installing-mkdocs">Installing MkDocs<a class="headerlink" href="#installing-mkdocs" title="Permanent link">¶</a></h3>
-<p>In order to install <a href="http://www.mkdocs.org">MkDocs</a>, Python and <code>pip</code> - the Python package manager -
+<p>In order to install <a href="http://www.mkdocs.org">MkDocs</a>, Python and <code>pip</code> – the Python package manager –
 need to be up and running. Assuming you are a developer and have a basic
 understanding of how things work and what StackOverflow is, we won't provide
 guidelines on setting those up. You can verify if you're already good to go
@@ -341,22 +341,45 @@ on and customize the theme through some options.</p>
 <h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">¶</a></h2>
 <p>The Material theme adds some extra variables for configuration via your
 project's <code>mkdocs.yml</code>. See the following section for all available options.</p>
-<h3 id="adding-a-logo">Adding a logo<a class="headerlink" href="#adding-a-logo" title="Permanent link">¶</a></h3>
-<p>If your project has a logo, you can add it to the drawer/navigation by defining
-the variable <code>extra.logo</code>. Ideally, the image of your logo should have
-rectangular shape with a minimum resolution of 128x128. The logo will also be
-used as a web application icon on iOS. Simply create the folder <code>docs/images</code>,
-add your image and reference it via:</p>
-<div class="code"><pre><span class="l-Scalar-Plain">extra</span><span class="p-Indicator">:</span>
-  <span class="l-Scalar-Plain">logo</span><span class="p-Indicator">:</span> <span class="s">&#39;images/logo.png&#39;</span>
-</pre></div>
-
-
 <h3 id="adding-a-version">Adding a version<a class="headerlink" href="#adding-a-version" title="Permanent link">¶</a></h3>
 <p>In order to add the current version next to the project banner inside the
 drawer, you can set the variable <code>extra.version</code>:</p>
 <div class="code"><pre><span class="l-Scalar-Plain">extra</span><span class="p-Indicator">:</span>
   <span class="l-Scalar-Plain">version</span><span class="p-Indicator">:</span> <span class="s">&#39;0.1.0&#39;</span>
+</pre></div>
+
+
+<p>This will also change the link behind the download button to point to the
+archive with the respective version on GitHub, assuming a release tagged with
+this exact version identifier.</p>
+<h3 id="adding-a-logo">Adding a logo<a class="headerlink" href="#adding-a-logo" title="Permanent link">¶</a></h3>
+<p>If your project has a logo, you can add it to the drawer/navigation by defining
+the variable <code>extra.logo</code>. Ideally, the image of your logo should have
+rectangular shape with a minimum resolution of 128x128 and leave some room
+towards the edges. The logo will also be used as a web application icon on iOS.
+Simply create the folder <code>docs/images</code>, add your image and reference it via:</p>
+<div class="code"><pre><span class="l-Scalar-Plain">extra</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">logo</span><span class="p-Indicator">:</span> <span class="s">&#39;images/logo.png&#39;</span>
+</pre></div>
+
+
+<h3 id="changing-the-font-family">Changing the font family<a class="headerlink" href="#changing-the-font-family" title="Permanent link">¶</a></h3>
+<p>Material uses the <a href="http://font.ubuntu.com">Ubuntu font family</a> by default, specifically the regular
+sans-serif type for text and the monospaced type for code. Both fonts are
+loaded from <a href="https://www.google.com/fonts">Google Fonts</a> and can be easily changed to other fonts, like for
+example Google's own <a href="https://www.google.com/fonts/specimen/Roboto">Roboto font</a>:</p>
+<div class="code"><pre><span class="l-Scalar-Plain">extra</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">font</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">text</span><span class="p-Indicator">:</span> <span class="s">&#39;Roboto&#39;</span>
+    <span class="l-Scalar-Plain">code</span><span class="p-Indicator">:</span> <span class="s">&#39;Roboto</span><span class="nv"> </span><span class="s">Mono&#39;</span>
+</pre></div>
+
+
+<p>The text font will be loaded in font-weights 400 and 700, the monospaced font
+in regular weight. If you want to load fonts from other destinations or don't
+want to use the Google Fonts loading magic, just set <code>extra.font</code> to <code>'none'</code>:</p>
+<div class="code"><pre><span class="l-Scalar-Plain">extra</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">font</span><span class="p-Indicator">:</span> <span class="s">&#39;none&#39;</span>
 </pre></div>
 
 
@@ -372,9 +395,8 @@ accounts to the drawer by setting the variables <code>extra.author.github</code>
 
 
 <h3 id="more-advanced-customization">More advanced customization<a class="headerlink" href="#more-advanced-customization" title="Permanent link">¶</a></h3>
-<p>If you want to change the fonts or colors - you are lucky. The Material theme
-is built with a sophisticated asset pipeline. See
-<a href="../customization/">this article</a> for more information on advanced
+<p>If you want to change the colors or general appearance of the Material theme,
+see <a href="../customization/">this article</a> for more information on advanced
 customization.</p>
 <h2 id="extensions">Extensions<a class="headerlink" href="#extensions" title="Permanent link">¶</a></h2>
 <p>MkDocs supports several <a href="http://www.mkdocs.org/user-guide/writing-your-docs/#markdown-extensions">Markdown extensions</a>. The following extensions are
@@ -389,7 +411,7 @@ the best code highlighter, but it works without JavaScript and on the server:</p
 
 
 <p>If you want more extensive highlighting, you can use a JavaScript library like
-<a href="https://highlightjs.org/">highlight.js</a>, which is not included in Material. See <a href="http://www.mkdocs.org/user-guide/styling-your-docs/#customising-a-theme">this link</a> for
+<a href="https://highlightjs.org">highlight.js</a>, which is not included in Material. See <a href="http://www.mkdocs.org/user-guide/styling-your-docs/#customising-a-theme">this link</a> for
 further instructions</p>
 <h3 id="permalinks">Permalinks<a class="headerlink" href="#permalinks" title="Permanent link">¶</a></h3>
 <p>In order to add <a href="https://en.wikipedia.org/wiki/Permalink">permalinks</a> to the headers of your article, set the
@@ -416,7 +438,7 @@ setting the variable <code>markdown_extensions.admonition</code>:</p>
 </pre></div>
 
 
-<p>This will print the following:</p>
+<p>This will print the following block:</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Nothing to see here, move along.</p>
@@ -451,6 +473,9 @@ for the <code>warning</code> class.</p>
 <span class="l-Scalar-Plain">extra</span><span class="p-Indicator">:</span>
   <span class="l-Scalar-Plain">version</span><span class="p-Indicator">:</span> <span class="s">&#39;0.1.0&#39;</span>
   <span class="l-Scalar-Plain">logo</span><span class="p-Indicator">:</span> <span class="s">&#39;images/logo.png&#39;</span>
+  <span class="l-Scalar-Plain">font</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">text</span><span class="p-Indicator">:</span> <span class="s">&#39;Roboto&#39;</span>
+    <span class="l-Scalar-Plain">code</span><span class="p-Indicator">:</span> <span class="s">&#39;Roboto</span><span class="nv"> </span><span class="s">Mono&#39;</span>
   <span class="l-Scalar-Plain">author</span><span class="p-Indicator">:</span>
     <span class="l-Scalar-Plain">github</span><span class="p-Indicator">:</span> <span class="s">&#39;my-github-handle&#39;</span>
     <span class="l-Scalar-Plain">twitter</span><span class="p-Indicator">:</span> <span class="s">&#39;my-twitter-handle&#39;</span>
@@ -526,7 +551,7 @@ for the <code>warning</code> class.</p>
         </div>
       </div>
     </main>
-    <script src="../assets/javascripts/modernizr-c9950243c2.js"></script>
+    <script src="../assets/javascripts/modernizr-4ab42b99fd.js"></script>
     <script>
       var base_url = '..';
       var repo_id  = 'squidfunk/mkdocs-material';
