@@ -77,10 +77,11 @@
     {% for path in extra_css %}
       <link rel="stylesheet" href="{{ path }}">
     {% endfor %}
+    <script src="{{ base_url }}/assets/javascripts/modernizr-4ab42b99fd.js"></script>
     {% block extrahead %}{% endblock %}
   </head>
   <body>
-    {% if repo_name == 'GitHub' %}
+    {% if repo_name == 'GitHub' and repo_url %}
       {% set repo_id = repo_url | replace('https://github.com/', '') %}
       {% if repo_id[-1:] == '/' %}
         {% set repo_id = repo_id[:-1] %}
@@ -137,12 +138,11 @@
         </div>
       </div>
     </main>
-    <script src="{{ base_url }}/assets/javascripts/modernizr-4ab42b99fd.js"></script>
     <script>
       var base_url = '{{ base_url }}';
       var repo_id  = '{{ repo_id }}';
     </script>
-    <script src="{{ base_url }}/assets/javascripts/application-c6d2e828bd.js"></script>
+    <script src="{{ base_url }}/assets/javascripts/application-a10a824a49.js"></script>
     {% for path in extra_javascript %}
       <script src="{{ path }}"></script>
     {% endfor %}
