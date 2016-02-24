@@ -164,8 +164,8 @@
             </a>
           </li>
           <li class="repo-stars">
-            <a href="https://github.com/squidfunk/mkdocs-material" target="_blank" title="Star Material on GitHub" data-action="star">
-              <i class="icon icon-star"></i> Star
+            <a href="https://github.com/squidfunk/mkdocs-material/stargazers" target="_blank" title="Stargazers Material on GitHub" data-action="star">
+              <i class="icon icon-star"></i> Stars
               <span class="count">&ndash;</span>
             </a>
           </li>
@@ -270,13 +270,13 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="customization">Customization<a class="headerlink" href="#customization" title="Permanent link">¶</a></h1>
-<h2 id="a-good-starting-point">A good starting point<a class="headerlink" href="#a-good-starting-point" title="Permanent link">¶</a></h2>
+          <h1 id="customization">Customization<a class="headerlink" href="#customization" title="Permanent link">#</a></h1>
+<h2 id="a-good-starting-point">A good starting point<a class="headerlink" href="#a-good-starting-point" title="Permanent link">#</a></h2>
 <p>Project documentation is as diverse as the projects themselves and the Material
 theme is a good starting point for making it look good. However, as you write
 your documentation, you may reach some point where some small adjustments are
 necessary to preserve the style.</p>
-<h2 id="small-tweaks">Small tweaks<a class="headerlink" href="#small-tweaks" title="Permanent link">¶</a></h2>
+<h2 id="small-tweaks">Small tweaks<a class="headerlink" href="#small-tweaks" title="Permanent link">#</a></h2>
 <p><a href="http://www.mkdocs.org">MkDocs</a> provides a simple way for making small adjustments, that is changing
 some margins, centering text, etc. Simply put the CSS and Javascript files that
 contain your adjustments in the <code>docs</code> directory (ideally in subdirectories of
@@ -289,12 +289,12 @@ variables in your <code>mkdocs.yml</code>:</p>
 
 <p>Further assistance on including extra CSS and Javascript can be found in the
 <a href="http://www.mkdocs.org/user-guide/styling-your-docs/#customising-a-theme">MkDocs documentation</a>.</p>
-<h2 id="fundamental-changes">Fundamental changes<a class="headerlink" href="#fundamental-changes" title="Permanent link">¶</a></h2>
+<h2 id="fundamental-changes">Fundamental changes<a class="headerlink" href="#fundamental-changes" title="Permanent link">#</a></h2>
 <p>If you want to make larger adjustments like changing the color palette or
 typography, you should check out or download the repository of the project and
 compile the SASS sources with your changes. The project design is very modular,
 so most things can be tweaked by changing a few variables.</p>
-<h3 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">¶</a></h3>
+<h3 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">#</a></h3>
 <p>In order to compile the project, you need <code>node</code> with a version greater than
 <code>0.11</code> up and running. Then, make sure <code>bower</code> is installed or install it:</p>
 <div class="code"><pre>npm install -g bower
@@ -314,7 +314,7 @@ npm install <span class="o">&amp;&amp;</span> bower install
 </pre></div>
 
 
-<h3 id="development">Development<a class="headerlink" href="#development" title="Permanent link">¶</a></h3>
+<h3 id="development">Development<a class="headerlink" href="#development" title="Permanent link">#</a></h3>
 <p>The asset pipeline is contained in <code>Gulpfile.js</code>, which you can start with
 <code>gulp watch</code>. If you specify the <code>--mkdocs</code> flag, this will also run
 <code>mkdocs serve</code>, to monitor changes to the documentation. Point your browser to <a href="http://localhost:8000">localhost:8000</a> and you should see this very
@@ -333,7 +333,7 @@ and <code>$accent</code> variables in <code>src/assets/stylesheets/_palette.scss
 <p>The color variables are defined by the SASS library <a href="https://github.com/nkpfstr/quantum-colors">quantum-colors</a> and
 resemble all the colors contained in the material design palette.
 <a href="http://www.materialui.co/colors">This page</a> offers a really good overview of the palette.</p>
-<h3 id="building">Building<a class="headerlink" href="#building" title="Permanent link">¶</a></h3>
+<h3 id="building">Building<a class="headerlink" href="#building" title="Permanent link">#</a></h3>
 <p>When you finished making your changes, you can build the theme by invoking:</p>
 <div class="code"><pre>gulp build --production
 </pre></div>
