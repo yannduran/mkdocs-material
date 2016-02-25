@@ -348,7 +348,8 @@ IN THE SOFTWARE.</p>
         var query = document.querySelector('.query');
         query.addEventListener('blur', function() {
           if (this.value)
-            ga('send', 'pageview', '/%search%/?q=' + this.value);
+            ga('send', 'pageview',
+              document.location.pathname + '/%search%/?q=' + this.value);
         });
       </script>
     
