@@ -168,9 +168,10 @@
         /* Register handler to log search on blur */
         var query = document.querySelector('.query');
         query.addEventListener('blur', function() {
-          if (this.value)
-            ga('send', 'pageview',
-              document.location.pathname + '/%search%/?q=' + this.value);
+          if (this.value) {
+            var path = document.location.pathname + '%search%/';
+            ga('send', 'pageview', path + '?q=' + this.value);
+          }
         });
       </script>
     {% endif %}
