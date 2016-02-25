@@ -445,7 +445,7 @@ changes to the original Material theme.</p>
           }
         });
         /* Register handler to log search on blur */
-        var query = document.querySelectorAll('.query');
+        var query = document.querySelector('.query');
         query.addEventListener('blur', function() {
           if (this.value)
             ga('send', 'pageview', '/%search%/?q=' + this.value);
