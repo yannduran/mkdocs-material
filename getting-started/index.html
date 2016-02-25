@@ -604,7 +604,7 @@ for the <code>warning</code> class. You can also add a custom title:</p>
       var base_url = '..';
       var repo_id  = 'squidfunk/mkdocs-material';
     </script>
-    <script src="../assets/javascripts/application-a10a824a49.js"></script>
+    <script src="../assets/javascripts/application-997097ee0c.js"></script>
     
     
       <script>
@@ -622,12 +622,18 @@ for the <code>warning</code> class. You can also add a custom title:</p>
         /* Track outbound links */
         var buttons = document.querySelectorAll('a');
         Array.prototype.map.call(buttons, function(item) {
-          if (item.host != window.location.host) {
+          if (item.host != document.location.host) {
             item.addEventListener('click', function() {
               var action = item.getAttribute('data-action') || 'follow';
               ga('send', 'event', 'outbound', action, item.href);
             });
           }
+        });
+        /* Register handler to log search on blur */
+        var query = document.querySelectorAll('.query');
+        query.addEventListener('blur', function() {
+          if (this.value)
+            ga('send', 'pageview', '/%search%/?q=' + this.value);
         });
       </script>
     
