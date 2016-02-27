@@ -124,7 +124,8 @@
               {% include "footer.html" %}
             </footer>
           {% endblock %}
-        </div></article>
+        </div>
+      </article>
       <div class="results" role="status" aria-live="polite">
         <div class="scrollable">
           <div class="wrapper">
@@ -169,7 +170,7 @@
         var query = document.querySelector('.query');
         query.addEventListener('blur', function() {
           if (this.value) {
-            var path = document.location.pathname + '%search%/';
+            var path = document.location.pathname;
             ga('send', 'pageview', path + '?q=' + this.value);
           }
         });
