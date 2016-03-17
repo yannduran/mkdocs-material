@@ -29,8 +29,8 @@
       <link rel="apple-touch-icon" href="../images/logo.png">
     
     
-    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon-e565ddfa3b.ico">
-    <link rel="icon" type="image/x-icon" href="../assets/images/favicon-e565ddfa3b.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../None">
+    <link rel="icon" type="image/x-icon" href="../None">
     <style>
       @font-face {
       	font-family: 'Icon';
@@ -143,7 +143,12 @@
         </div>
       
       <div class="name">
-        <strong>Material 0.2.1</strong>
+        <strong>
+          Material
+          <span class="version">
+            0.2.1
+          </span>
+        </strong>
         
           <br>
           squidfunk/mkdocs-material
@@ -447,8 +452,9 @@ be activated in your project's <code>mkdocs.yml</code>:</p>
 not enabled by default (see the link for which are enabled by default), so you
 have to switch them on explicitly.</p>
 <h3 id="codehilite-recommended">CodeHilite (recommended)<a class="headerlink" href="#codehilite-recommended" title="Permanent link">#</a></h3>
-<p>This extensions adds code highlighting to fenced code blocks. It might not be
-the best code highlighter, but it works without JavaScript and on the server:</p>
+<p>This extensions uses <a href="http://pygments.org">Pygments</a> (install with <code>pip install pygments</code>) to add
+code highlighting to fenced code blocks. It might not be the best code
+highlighter, but it works without JavaScript and on the server:</p>
 <div class="code"><pre><span class="l-Scalar-Plain">markdown_extensions</span><span class="p-Indicator">:</span>
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">codehilite(css_class=code)</span>
 </pre></div>
@@ -459,10 +465,10 @@ the best code highlighter, but it works without JavaScript and on the server:</p
 further instructions</p>
 <h3 id="permalinks">Permalinks<a class="headerlink" href="#permalinks" title="Permanent link">#</a></h3>
 <p>In order to add <a href="https://en.wikipedia.org/wiki/Permalink">permalinks</a> to the headers of your article, set the
-<code>markdown_extensions.toc.permalink</code> variable to a symbol, e.g. <code>¶</code>:</p>
+<code>markdown_extensions.toc.permalink</code> variable to a symbol, e.g. <code>#</code>:</p>
 <div class="code"><pre><span class="l-Scalar-Plain">markdown_extensions</span><span class="p-Indicator">:</span>
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">toc</span><span class="p-Indicator">:</span>
-    <span class="l-Scalar-Plain">permalink</span><span class="p-Indicator">:</span> <span class="s">&#39;¶&#39;</span>
+    <span class="l-Scalar-Plain">permalink</span><span class="p-Indicator">:</span> <span class="s">&#39;#&#39;</span>
 </pre></div>
 
 
@@ -546,7 +552,7 @@ for the <code>warning</code> class. You can also add a custom title:</p>
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">codehilite(css_class=code)</span>
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">admonition</span>
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">toc</span><span class="p-Indicator">:</span>
-      <span class="l-Scalar-Plain">permalink</span><span class="p-Indicator">:</span> <span class="s">&#39;¶&#39;</span>
+      <span class="l-Scalar-Plain">permalink</span><span class="p-Indicator">:</span> <span class="s">&#39;#&#39;</span>
 </pre></div>
           <aside class="copyright" role="note">
             
