@@ -47,7 +47,7 @@
       	font-style: normal;
       }
     </style>
-    <link rel="stylesheet" href="../assets/stylesheets/application-54f87043f3.css">
+    <link rel="stylesheet" href="../assets/stylesheets/application-0dac3e5884.css">
     
     
       
@@ -146,7 +146,7 @@
         <strong>
           Material
           <span class="version">
-            0.2.2
+            0.2.3
           </span>
         </strong>
         
@@ -162,7 +162,7 @@
         <ul class="repo">
           <li class="repo-download">
             
-            <a href="https://github.com/squidfunk/mkdocs-material/archive/0.2.2.zip" target="_blank" title="Download" data-action="download">
+            <a href="https://github.com/squidfunk/mkdocs-material/archive/0.2.3.zip" target="_blank" title="Download" data-action="download">
               <i class="icon icon-download"></i> Download
             </a>
           </li>
@@ -292,52 +292,52 @@
 have a basic understanding of how things work and what StackOverflow is, we
 won't provide guidelines on setting those up. You can verify if you're already
 good to go with the following commands:</p>
-<div class="code"><pre>python --version
-<span class="c"># Python 2.7.2</span>
+<div class="code"><pre><span></span>python --version
+<span class="c1"># Python 2.7.2</span>
 pip --version
-<span class="c"># pip 1.5.2</span>
+<span class="c1"># pip 1.5.2</span>
 </pre></div>
 
 
 <p>Installing and verifying MkDocs is as simple as:</p>
-<div class="code"><pre>pip install mkdocs <span class="o">&amp;&amp;</span> mkdocs --version
-<span class="c"># mkdocs, version 0.15.2</span>
+<div class="code"><pre><span></span>pip install mkdocs <span class="o">&amp;&amp;</span> mkdocs --version
+<span class="c1"># mkdocs, version 0.15.2</span>
 </pre></div>
 
 
 <h3 id="installing-material">Installing Material<a class="headerlink" href="#installing-material" title="Permanent link">#</a></h3>
 <p>Next, assuming you have MkDocs up and running <code>mkdocs-material</code> can be
 installed with <code>pip</code>:</p>
-<div class="code"><pre>pip install mkdocs-material
+<div class="code"><pre><span></span>pip install mkdocs-material
 </pre></div>
 
 
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">#</a></h2>
 <p>If you haven't already done it, creating a new documentation project is really
 simple in MkDocs:</p>
-<div class="code"><pre>mkdocs new my-project
-<span class="nb">cd </span>my-project
+<div class="code"><pre><span></span>mkdocs new my-project
+<span class="nb">cd</span> my-project
 </pre></div>
 
 
 <p>MkDocs will create the necessary files and base directory structure inside the
 folder <code>my-project</code>. In order to enable the theme just add the following line
 to the auto-generated <code>mkdocs.yml</code>:</p>
-<div class="code"><pre><span class="l-Scalar-Plain">theme</span><span class="p-Indicator">:</span> <span class="s">&#39;material&#39;</span>
+<div class="code"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">theme</span><span class="p p-Indicator">:</span> <span class="s">&#39;material&#39;</span>
 </pre></div>
 
 
 <p>If your project is hosted on GitHub, add the repository link to the
 configuration. If the <code>repo_name</code> equals <strong>GitHub</strong>, the Material theme will
 add a download and star button, and display the number of stars:</p>
-<div class="code"><pre><span class="l-Scalar-Plain">repo_name</span><span class="p-Indicator">:</span> <span class="s">&#39;GitHub&#39;</span>
-<span class="l-Scalar-Plain">repo_url</span><span class="p-Indicator">:</span> <span class="s">&#39;https://github.com/my-github-handle/my-project&#39;</span>
+<div class="code"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">repo_name</span><span class="p p-Indicator">:</span> <span class="s">&#39;GitHub&#39;</span>
+<span class="l l-Scalar l-Scalar-Plain">repo_url</span><span class="p p-Indicator">:</span> <span class="s">&#39;https://github.com/my-github-handle/my-project&#39;</span>
 </pre></div>
 
 
 <p>MkDocs includes a development server, so you can view your changes as you go -
 very handy. Spin it up with the following command:</p>
-<div class="code"><pre>mkdocs serve
+<div class="code"><pre><span></span>mkdocs serve
 </pre></div>
 
 
@@ -350,8 +350,8 @@ project's <code>mkdocs.yml</code>. See the following section for all available o
 <h3 id="adding-a-version">Adding a version<a class="headerlink" href="#adding-a-version" title="Permanent link">#</a></h3>
 <p>In order to add the current version next to the project banner inside the
 drawer, you can set the variable <code>extra.version</code>:</p>
-<div class="code"><pre><span class="l-Scalar-Plain">extra</span><span class="p-Indicator">:</span>
-  <span class="l-Scalar-Plain">version</span><span class="p-Indicator">:</span> <span class="s">&#39;0.1.0&#39;</span>
+<div class="code"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">version</span><span class="p p-Indicator">:</span> <span class="s">&#39;0.1.0&#39;</span>
 </pre></div>
 
 
@@ -364,8 +364,8 @@ the variable <code>extra.logo</code>. Ideally, the image of your logo should hav
 rectangular shape with a minimum resolution of 128x128 and leave some room
 towards the edges. The logo will also be used as a web application icon on iOS.
 Simply create the folder <code>docs/images</code>, add your image and reference it via:</p>
-<div class="code"><pre><span class="l-Scalar-Plain">extra</span><span class="p-Indicator">:</span>
-  <span class="l-Scalar-Plain">logo</span><span class="p-Indicator">:</span> <span class="s">&#39;images/logo.png&#39;</span>
+<div class="code"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">logo</span><span class="p p-Indicator">:</span> <span class="s">&#39;images/logo.png&#39;</span>
 </pre></div>
 
 
@@ -374,10 +374,10 @@ Simply create the folder <code>docs/images</code>, add your image and reference 
 material design <a href="http://www.materialui.co/colors">color palette</a>. This makes it very easy to change the
 overall look of the theme. Just set the variables <code>extra.palette.primary</code> and
 <code>extra.palette.accent</code> to one of the colors defined in the palette:</p>
-<div class="code"><pre><span class="l-Scalar-Plain">extra</span><span class="p-Indicator">:</span>
-  <span class="l-Scalar-Plain">palette</span><span class="p-Indicator">:</span>
-    <span class="l-Scalar-Plain">primary</span><span class="p-Indicator">:</span> <span class="s">&#39;indigo&#39;</span>
-    <span class="l-Scalar-Plain">accent</span><span class="p-Indicator">:</span> <span class="s">&#39;light</span><span class="nv"> </span><span class="s">blue&#39;</span>
+<div class="code"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">palette</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">primary</span><span class="p p-Indicator">:</span> <span class="s">&#39;indigo&#39;</span>
+    <span class="l l-Scalar l-Scalar-Plain">accent</span><span class="p p-Indicator">:</span> <span class="s">&#39;light</span><span class="nv"> </span><span class="s">blue&#39;</span>
 </pre></div>
 
 
@@ -396,10 +396,10 @@ custom colors set. See <a href="../customization/">this article</a> for more inf
 sans-serif type for text and the monospaced type for code. Both fonts are
 loaded from <a href="https://www.google.com/fonts">Google Fonts</a> and can be easily changed to other fonts, like for
 example Google's own <a href="https://www.google.com/fonts/specimen/Roboto">Roboto font</a>:</p>
-<div class="code"><pre><span class="l-Scalar-Plain">extra</span><span class="p-Indicator">:</span>
-  <span class="l-Scalar-Plain">font</span><span class="p-Indicator">:</span>
-    <span class="l-Scalar-Plain">text</span><span class="p-Indicator">:</span> <span class="s">&#39;Roboto&#39;</span>
-    <span class="l-Scalar-Plain">code</span><span class="p-Indicator">:</span> <span class="s">&#39;Roboto</span><span class="nv"> </span><span class="s">Mono&#39;</span>
+<div class="code"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">font</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">text</span><span class="p p-Indicator">:</span> <span class="s">&#39;Roboto&#39;</span>
+    <span class="l l-Scalar l-Scalar-Plain">code</span><span class="p p-Indicator">:</span> <span class="s">&#39;Roboto</span><span class="nv"> </span><span class="s">Mono&#39;</span>
 </pre></div>
 
 
@@ -407,18 +407,18 @@ example Google's own <a href="https://www.google.com/fonts/specimen/Roboto">Robo
 font in regular weight. If you want to load fonts from other destinations or
 don't want to use the Google Fonts loading magic, just set <code>extra.font</code> to
 <code>'none'</code>:</p>
-<div class="code"><pre><span class="l-Scalar-Plain">extra</span><span class="p-Indicator">:</span>
-  <span class="l-Scalar-Plain">font</span><span class="p-Indicator">:</span> <span class="s">&#39;none&#39;</span>
+<div class="code"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">font</span><span class="p p-Indicator">:</span> <span class="s">&#39;none&#39;</span>
 </pre></div>
 
 
 <h3 id="localization">Localization<a class="headerlink" href="#localization" title="Permanent link">#</a></h3>
 <p>The <strong>Previous</strong> and <strong>Next</strong> labels in the footer can easily be changed by
 defining the variables <code>extra.i18n.prev</code> and <code>extra.i18n.next</code>:</p>
-<div class="code"><pre><span class="l-Scalar-Plain">extra</span><span class="p-Indicator">:</span>
-  <span class="l-Scalar-Plain">i18n</span><span class="p-Indicator">:</span>
-    <span class="l-Scalar-Plain">prev</span><span class="p-Indicator">:</span> <span class="s">&#39;Previous&#39;</span>
-    <span class="l-Scalar-Plain">next</span><span class="p-Indicator">:</span> <span class="s">&#39;Next&#39;</span>
+<div class="code"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">i18n</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">prev</span><span class="p p-Indicator">:</span> <span class="s">&#39;Previous&#39;</span>
+    <span class="l l-Scalar l-Scalar-Plain">next</span><span class="p p-Indicator">:</span> <span class="s">&#39;Next&#39;</span>
 </pre></div>
 
 
@@ -426,10 +426,10 @@ defining the variables <code>extra.i18n.prev</code> and <code>extra.i18n.next</c
 <p>If you have a GitHub and/or Twitter account, you can add links to your
 accounts to the drawer by setting the variables <code>extra.author.github</code> and
 <code>extra.author.twitter</code> respectively:</p>
-<div class="code"><pre><span class="l-Scalar-Plain">extra</span><span class="p-Indicator">:</span>
-  <span class="l-Scalar-Plain">author</span><span class="p-Indicator">:</span>
-    <span class="l-Scalar-Plain">github</span><span class="p-Indicator">:</span> <span class="s">&#39;my-github-handle&#39;</span>
-    <span class="l-Scalar-Plain">twitter</span><span class="p-Indicator">:</span> <span class="s">&#39;my-twitter-handle&#39;</span>
+<div class="code"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">author</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">github</span><span class="p p-Indicator">:</span> <span class="s">&#39;my-github-handle&#39;</span>
+    <span class="l l-Scalar l-Scalar-Plain">twitter</span><span class="p p-Indicator">:</span> <span class="s">&#39;my-twitter-handle&#39;</span>
 </pre></div>
 
 
@@ -438,9 +438,9 @@ accounts to the drawer by setting the variables <code>extra.author.github</code>
 Besides basic tracking, clicks on all outgoing links can be tracked, clicks on
 the download and star button, as well as how site search is used. Tracking can
 be activated in your project's <code>mkdocs.yml</code>:</p>
-<div class="code"><pre><span class="l-Scalar-Plain">google_analytics</span><span class="p-Indicator">:</span>
-  <span class="p-Indicator">-</span> <span class="s">&#39;UA-XXXXXXXX-X&#39;</span>
-  <span class="p-Indicator">-</span> <span class="s">&#39;auto&#39;</span>
+<div class="code"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">google_analytics</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="s">&#39;UA-XXXXXXXX-X&#39;</span>
+  <span class="p p-Indicator">-</span> <span class="s">&#39;auto&#39;</span>
 </pre></div>
 
 
@@ -455,8 +455,8 @@ have to switch them on explicitly.</p>
 <p>This extensions uses <a href="http://pygments.org">Pygments</a> (install with <code>pip install pygments</code>) to add
 code highlighting to fenced code blocks. It might not be the best code
 highlighter, but it works without JavaScript and on the server:</p>
-<div class="code"><pre><span class="l-Scalar-Plain">markdown_extensions</span><span class="p-Indicator">:</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">codehilite(css_class=code)</span>
+<div class="code"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">markdown_extensions</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">codehilite(css_class=code)</span>
 </pre></div>
 
 
@@ -466,9 +466,9 @@ further instructions</p>
 <h3 id="permalinks">Permalinks<a class="headerlink" href="#permalinks" title="Permanent link">#</a></h3>
 <p>In order to add <a href="https://en.wikipedia.org/wiki/Permalink">permalinks</a> to the headers of your article, set the
 <code>markdown_extensions.toc.permalink</code> variable to a symbol, e.g. <code>#</code>:</p>
-<div class="code"><pre><span class="l-Scalar-Plain">markdown_extensions</span><span class="p-Indicator">:</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">toc</span><span class="p-Indicator">:</span>
-    <span class="l-Scalar-Plain">permalink</span><span class="p-Indicator">:</span> <span class="s">&#39;#&#39;</span>
+<div class="code"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">markdown_extensions</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">toc</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">permalink</span><span class="p p-Indicator">:</span> <span class="s">&#39;#&#39;</span>
 </pre></div>
 
 
@@ -477,13 +477,13 @@ further instructions</p>
 <p><a href="https://pythonhosted.org/Markdown/extensions/admonition.html">Admonition</a> is a handy extension that adds block-styled side content to your
 documentation, for example hints, notes or warnings. It can be enabled by
 setting the variable <code>markdown_extensions.admonition</code>:</p>
-<div class="code"><pre><span class="l-Scalar-Plain">markdown_extensions</span><span class="p-Indicator">:</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">admonition</span>
+<div class="code"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">markdown_extensions</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">admonition</span>
 </pre></div>
 
 
 <p>In order to add a note, use the following syntax inside your article:</p>
-<div class="code"><pre>!!! note
+<div class="code"><pre><span></span>!!! note
     Nothing to see here, move along.
 </pre></div>
 
@@ -495,7 +495,7 @@ setting the variable <code>markdown_extensions.admonition</code>:</p>
 </div>
 <p>The Material template adds a neutral color for the <code>note</code> class and a red color
 for the <code>warning</code> class. You can also add a custom title:</p>
-<div class="code"><pre>!!! warning &quot;Don&#39;t try this at home&quot;
+<div class="code"><pre><span></span>!!! warning &quot;Don&#39;t try this at home&quot;
     If you do, you will regret it.
 </pre></div>
 
@@ -508,51 +508,51 @@ for the <code>warning</code> class. You can also add a custom title:</p>
 <p>More colors can be freely defined.</p>
 <h2 id="full-example">Full example<a class="headerlink" href="#full-example" title="Permanent link">#</a></h2>
 <p>Below is a full example configuration for a mkdocs.yml:</p>
-<div class="code"><pre><span class="c1"># Project information</span>
-<span class="l-Scalar-Plain">site_name</span><span class="p-Indicator">:</span> <span class="s">&#39;My</span><span class="nv"> </span><span class="s">Project&#39;</span>
-<span class="l-Scalar-Plain">site_description</span><span class="p-Indicator">:</span> <span class="s">&#39;A</span><span class="nv"> </span><span class="s">short</span><span class="nv"> </span><span class="s">description</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">my</span><span class="nv"> </span><span class="s">project&#39;</span>
-<span class="l-Scalar-Plain">site_author</span><span class="p-Indicator">:</span> <span class="s">&#39;John</span><span class="nv"> </span><span class="s">Doe&#39;</span>
-<span class="l-Scalar-Plain">site_url</span><span class="p-Indicator">:</span> <span class="s">&#39;https://my-github-handle.github.io/my-project&#39;</span>
+<div class="code"><pre><span></span><span class="c1"># Project information</span>
+<span class="l l-Scalar l-Scalar-Plain">site_name</span><span class="p p-Indicator">:</span> <span class="s">&#39;My</span><span class="nv"> </span><span class="s">Project&#39;</span>
+<span class="l l-Scalar l-Scalar-Plain">site_description</span><span class="p p-Indicator">:</span> <span class="s">&#39;A</span><span class="nv"> </span><span class="s">short</span><span class="nv"> </span><span class="s">description</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">my</span><span class="nv"> </span><span class="s">project&#39;</span>
+<span class="l l-Scalar l-Scalar-Plain">site_author</span><span class="p p-Indicator">:</span> <span class="s">&#39;John</span><span class="nv"> </span><span class="s">Doe&#39;</span>
+<span class="l l-Scalar l-Scalar-Plain">site_url</span><span class="p p-Indicator">:</span> <span class="s">&#39;https://my-github-handle.github.io/my-project&#39;</span>
 
 <span class="c1"># Repository</span>
-<span class="l-Scalar-Plain">repo_name</span><span class="p-Indicator">:</span> <span class="s">&#39;GitHub&#39;</span>
-<span class="l-Scalar-Plain">repo_url</span><span class="p-Indicator">:</span> <span class="s">&#39;https://github.com/my-github-handle/my-project&#39;</span>
+<span class="l l-Scalar l-Scalar-Plain">repo_name</span><span class="p p-Indicator">:</span> <span class="s">&#39;GitHub&#39;</span>
+<span class="l l-Scalar l-Scalar-Plain">repo_url</span><span class="p p-Indicator">:</span> <span class="s">&#39;https://github.com/my-github-handle/my-project&#39;</span>
 
 <span class="c1"># Copyright</span>
-<span class="l-Scalar-Plain">copyright</span><span class="p-Indicator">:</span> <span class="s">&#39;Copyright</span><span class="nv"> </span><span class="s">(c)</span><span class="nv"> </span><span class="s">2016</span><span class="nv"> </span><span class="s">John</span><span class="nv"> </span><span class="s">Doe&#39;</span>
+<span class="l l-Scalar l-Scalar-Plain">copyright</span><span class="p p-Indicator">:</span> <span class="s">&#39;Copyright</span><span class="nv"> </span><span class="s">(c)</span><span class="nv"> </span><span class="s">2016</span><span class="nv"> </span><span class="s">John</span><span class="nv"> </span><span class="s">Doe&#39;</span>
 
 <span class="c1"># Documentation and theme</span>
-<span class="l-Scalar-Plain">docs_dir</span><span class="p-Indicator">:</span> <span class="s">&#39;docs&#39;</span>
-<span class="l-Scalar-Plain">theme</span><span class="p-Indicator">:</span> <span class="s">&#39;material&#39;</span>
+<span class="l l-Scalar l-Scalar-Plain">docs_dir</span><span class="p p-Indicator">:</span> <span class="s">&#39;docs&#39;</span>
+<span class="l l-Scalar l-Scalar-Plain">theme</span><span class="p p-Indicator">:</span> <span class="s">&#39;material&#39;</span>
 
 <span class="c1"># Options</span>
-<span class="l-Scalar-Plain">extra</span><span class="p-Indicator">:</span>
-  <span class="l-Scalar-Plain">version</span><span class="p-Indicator">:</span> <span class="s">&#39;0.1.0&#39;</span>
-  <span class="l-Scalar-Plain">logo</span><span class="p-Indicator">:</span> <span class="s">&#39;images/logo.png&#39;</span>
-  <span class="l-Scalar-Plain">palette</span><span class="p-Indicator">:</span>
-    <span class="l-Scalar-Plain">primary</span><span class="p-Indicator">:</span> <span class="s">&#39;indigo&#39;</span>
-    <span class="l-Scalar-Plain">accent</span><span class="p-Indicator">:</span> <span class="s">&#39;light</span><span class="nv"> </span><span class="s">blue&#39;</span>
-  <span class="l-Scalar-Plain">font</span><span class="p-Indicator">:</span>
-    <span class="l-Scalar-Plain">text</span><span class="p-Indicator">:</span> <span class="s">&#39;Roboto&#39;</span>
-    <span class="l-Scalar-Plain">code</span><span class="p-Indicator">:</span> <span class="s">&#39;Roboto</span><span class="nv"> </span><span class="s">Mono&#39;</span>
-  <span class="l-Scalar-Plain">i18n</span><span class="p-Indicator">:</span>
-    <span class="l-Scalar-Plain">prev</span><span class="p-Indicator">:</span> <span class="s">&#39;Previous&#39;</span>
-    <span class="l-Scalar-Plain">next</span><span class="p-Indicator">:</span> <span class="s">&#39;Next&#39;</span>
-  <span class="l-Scalar-Plain">author</span><span class="p-Indicator">:</span>
-    <span class="l-Scalar-Plain">github</span><span class="p-Indicator">:</span> <span class="s">&#39;my-github-handle&#39;</span>
-    <span class="l-Scalar-Plain">twitter</span><span class="p-Indicator">:</span> <span class="s">&#39;my-twitter-handle&#39;</span>
+<span class="l l-Scalar l-Scalar-Plain">extra</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">version</span><span class="p p-Indicator">:</span> <span class="s">&#39;0.1.0&#39;</span>
+  <span class="l l-Scalar l-Scalar-Plain">logo</span><span class="p p-Indicator">:</span> <span class="s">&#39;images/logo.png&#39;</span>
+  <span class="l l-Scalar l-Scalar-Plain">palette</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">primary</span><span class="p p-Indicator">:</span> <span class="s">&#39;indigo&#39;</span>
+    <span class="l l-Scalar l-Scalar-Plain">accent</span><span class="p p-Indicator">:</span> <span class="s">&#39;light</span><span class="nv"> </span><span class="s">blue&#39;</span>
+  <span class="l l-Scalar l-Scalar-Plain">font</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">text</span><span class="p p-Indicator">:</span> <span class="s">&#39;Roboto&#39;</span>
+    <span class="l l-Scalar l-Scalar-Plain">code</span><span class="p p-Indicator">:</span> <span class="s">&#39;Roboto</span><span class="nv"> </span><span class="s">Mono&#39;</span>
+  <span class="l l-Scalar l-Scalar-Plain">i18n</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">prev</span><span class="p p-Indicator">:</span> <span class="s">&#39;Previous&#39;</span>
+    <span class="l l-Scalar l-Scalar-Plain">next</span><span class="p p-Indicator">:</span> <span class="s">&#39;Next&#39;</span>
+  <span class="l l-Scalar l-Scalar-Plain">author</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">github</span><span class="p p-Indicator">:</span> <span class="s">&#39;my-github-handle&#39;</span>
+    <span class="l l-Scalar l-Scalar-Plain">twitter</span><span class="p p-Indicator">:</span> <span class="s">&#39;my-twitter-handle&#39;</span>
 
 <span class="c1"># Google Analytics</span>
-<span class="l-Scalar-Plain">google_analytics</span><span class="p-Indicator">:</span>
-  <span class="p-Indicator">-</span> <span class="s">&#39;UA-XXXXXXXX-X&#39;</span>
-  <span class="p-Indicator">-</span> <span class="s">&#39;auto&#39;</span>
+<span class="l l-Scalar l-Scalar-Plain">google_analytics</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="s">&#39;UA-XXXXXXXX-X&#39;</span>
+  <span class="p p-Indicator">-</span> <span class="s">&#39;auto&#39;</span>
 
 <span class="c1"># Extensions</span>
-<span class="l-Scalar-Plain">markdown_extensions</span><span class="p-Indicator">:</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">codehilite(css_class=code)</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">admonition</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">toc</span><span class="p-Indicator">:</span>
-      <span class="l-Scalar-Plain">permalink</span><span class="p-Indicator">:</span> <span class="s">&#39;#&#39;</span>
+<span class="l l-Scalar l-Scalar-Plain">markdown_extensions</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">codehilite(css_class=code)</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">admonition</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">toc</span><span class="p p-Indicator">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">permalink</span><span class="p p-Indicator">:</span> <span class="s">&#39;#&#39;</span>
 </pre></div>
           <aside class="copyright" role="note">
             

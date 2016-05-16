@@ -47,7 +47,7 @@
       	font-style: normal;
       }
     </style>
-    <link rel="stylesheet" href="../assets/stylesheets/application-54f87043f3.css">
+    <link rel="stylesheet" href="../assets/stylesheets/application-0dac3e5884.css">
     
     
       
@@ -146,7 +146,7 @@
         <strong>
           Material
           <span class="version">
-            0.2.2
+            0.2.3
           </span>
         </strong>
         
@@ -162,7 +162,7 @@
         <ul class="repo">
           <li class="repo-download">
             
-            <a href="https://github.com/squidfunk/mkdocs-material/archive/0.2.2.zip" target="_blank" title="Download" data-action="download">
+            <a href="https://github.com/squidfunk/mkdocs-material/archive/0.2.3.zip" target="_blank" title="Download" data-action="download">
               <i class="icon icon-download"></i> Download
             </a>
           </li>
@@ -284,8 +284,8 @@ some margins, centering text, etc. Simply put the CSS and Javascript files that
 contain your adjustments in the <code>docs</code> directory (ideally in subdirectories of
 their own) and include them via the <code>extra_css</code> and <code>extra_javascript</code>
 variables in your <code>mkdocs.yml</code>:</p>
-<div class="code"><pre><span class="l-Scalar-Plain">extra_css</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span><span class="s">&#39;/stylesheets/extra.css&#39;</span><span class="p-Indicator">]</span>
-<span class="l-Scalar-Plain">extra_javascript</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span><span class="s">&#39;/javascripts/extra.js&#39;</span><span class="p-Indicator">]</span>
+<div class="code"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra_css</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="s">&#39;/stylesheets/extra.css&#39;</span><span class="p p-Indicator">]</span>
+<span class="l l-Scalar l-Scalar-Plain">extra_javascript</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="s">&#39;/javascripts/extra.js&#39;</span><span class="p p-Indicator">]</span>
 </pre></div>
 
 
@@ -299,19 +299,19 @@ so most things can be tweaked by changing a few variables.</p>
 <h3 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">#</a></h3>
 <p>In order to compile the project, you need <code>node</code> with a version greater than
 <code>0.11</code> up and running. Then, make sure <code>bower</code> is installed or install it:</p>
-<div class="code"><pre>npm install -g bower
+<div class="code"><pre><span></span>npm install -g bower
 </pre></div>
 
 
 <p>The project itself is hosted on GitHub, so the next
 thing you should do is clone the project from GitHub:</p>
-<div class="code"><pre>git clone https://github.com/squidfunk/mkdocs-material
+<div class="code"><pre><span></span>git clone https://github.com/squidfunk/mkdocs-material
 </pre></div>
 
 
 <p>Then you change the directory and install all dependencies specified in the
 <code>package.json</code> and <code>bower.json</code> with the following command:</p>
-<div class="code"><pre><span class="nb">cd </span>mkdocs-material
+<div class="code"><pre><span></span><span class="nb">cd</span> mkdocs-material
 npm install <span class="o">&amp;&amp;</span> bower install
 </pre></div>
 
@@ -321,13 +321,13 @@ npm install <span class="o">&amp;&amp;</span> bower install
 <code>gulp watch</code>. If you specify the <code>--mkdocs</code> flag, this will also run
 <code>mkdocs serve</code>, to monitor changes to the documentation. Point your browser to <a href="http://localhost:8000">localhost:8000</a> and you should see this very
 documentation in front of your eyes.</p>
-<div class="code"><pre>gulp watch --mkdocs
+<div class="code"><pre><span></span>gulp watch --mkdocs
 </pre></div>
 
 
 <p>For example, changing the color palette is as simple as changing the <code>$primary</code>
 and <code>$accent</code> variables in <code>src/assets/stylesheets/_palette.scss</code>:</p>
-<div class="code"><pre><span class="o">$</span><span class="nt">primary</span><span class="o">:</span> <span class="o">$</span><span class="nt">red-400</span><span class="o">;</span>
+<div class="code"><pre><span></span><span class="o">$</span><span class="nt">primary</span><span class="o">:</span> <span class="o">$</span><span class="nt">red-400</span><span class="o">;</span>
 <span class="o">$</span><span class="nt">accent</span><span class="o">:</span>  <span class="o">$</span><span class="nt">teal-a700</span><span class="o">;</span>
 </pre></div>
 
@@ -337,7 +337,7 @@ resemble all the colors contained in the material design palette.
 <a href="http://www.materialui.co/colors">This page</a> offers a really good overview of the palette.</p>
 <h3 id="building">Building<a class="headerlink" href="#building" title="Permanent link">#</a></h3>
 <p>When you finished making your changes, you can build the theme by invoking:</p>
-<div class="code"><pre>gulp build --production
+<div class="code"><pre><span></span>gulp build --production
 </pre></div>
 
 
@@ -346,7 +346,7 @@ minification of all CSS and Javascript sources. When the command is ready,
 the final theme is located in the <code>material</code> directory. Add the <code>theme_dir</code>
 variable pointing to the aforementioned directory in your original
 <code>mkdocs.yml</code>:</p>
-<div class="code"><pre><span class="l-Scalar-Plain">theme_dir</span><span class="p-Indicator">:</span> <span class="s">&#39;mkdocs-material/material&#39;</span>
+<div class="code"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">theme_dir</span><span class="p p-Indicator">:</span> <span class="s">&#39;mkdocs-material/material&#39;</span>
 </pre></div>
 
 
